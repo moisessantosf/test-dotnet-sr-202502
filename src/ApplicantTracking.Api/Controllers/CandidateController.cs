@@ -42,7 +42,7 @@ namespace ApplicantTracking.Api.Controllers
             var candidate = await _mediator.Send(query);
             if (candidate == null)
             {
-                return NotFound(new { message = $"Candidate with ID {idCandidate} not found." });
+                return NotFound(new { message = $"Candidate with id {idCandidate} not found." });
             }
             return Ok(candidate);
         }
@@ -70,7 +70,7 @@ namespace ApplicantTracking.Api.Controllers
             var result = await _mediator.Send(command);
             if (result == null)
             {
-                return NotFound(new { message = $"Candidate with ID {id} not found for update." });
+                return NotFound(new { message = $"Candidate with id {id} not found for update." });
             }
             return NoContent();
         }
@@ -84,7 +84,7 @@ namespace ApplicantTracking.Api.Controllers
             var success = await _mediator.Send(command);
             if (!success)
             {
-                return NotFound(new { message = $"Candidate with ID {idCandidate} not found for deletion." });
+                return NotFound(new { message = $"Candidate with id {idCandidate} not found for deletion." });
             }
             return NoContent();
         }

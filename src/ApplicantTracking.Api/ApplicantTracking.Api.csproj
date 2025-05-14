@@ -4,6 +4,8 @@
     <TargetFramework>net7.0</TargetFramework>
     <UserSecretsId>c819f06d-ce37-41ba-bd33-64410b2a70db</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
   </PropertyGroup>
 
   <ItemGroup>

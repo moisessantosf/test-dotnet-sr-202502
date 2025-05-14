@@ -1,4 +1,3 @@
-using System;
 using ApplicantTracking.Api.Middleware;
 using ApplicantTracking.Application.Mappings;
 using ApplicantTracking.Domain.Interfaces;
@@ -7,13 +6,7 @@ using ApplicantTracking.Infrastructure.Context;
 using ApplicantTracking.Infrastructure.Persistence;
 using ApplicantTracking.Infrastructure.Persistence.Repositories;
 using FluentValidation;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -81,3 +74,8 @@ app.UseHttpsRedirection();
 app.MapControllers();
 
 app.Run();
+
+namespace ApplicantTracking.Api
+{
+    public partial class Program { } // Adicione esta linha
+}
