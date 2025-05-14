@@ -2,3 +2,15 @@ services:
   test.db:
     image: mcr.microsoft.com/mssql/server:2019-latest
     container_name: test.db
+    environment:
+      SA_PASSWORD: "yourStrong(!)Password"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1433:1433"
+    volumes:
+      - test_db_data:/var/opt/mssql
+
+volumes:
+  test_db_data:
+    driver: local
